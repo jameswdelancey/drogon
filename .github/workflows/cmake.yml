@@ -80,7 +80,9 @@ jobs:
       # We'll use this as our working directory for all subsequent commands
       shell: bash
       working-directory: ${{env.GITHUB_WORKSPACE}}
-      run: cmake -E make_directory build
+      run: |
+        pwd
+        mkdir build
 
     - name: Configure CMake
       # Use a bash shell so we can use the same syntax for environment variable
