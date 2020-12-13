@@ -91,7 +91,7 @@ jobs:
       # Execute the build.  You can specify a specific target with "--target <NAME>"
       run: |
         cd build
-        cmake --build . --config $BUILD_TYPE
+        make && make install
 
     - name: Prepare for testing
       if: runner.os == 'macOS'
