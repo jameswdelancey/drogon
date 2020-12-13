@@ -91,7 +91,7 @@ jobs:
       # Execute the build.  You can specify a specific target with "--target <NAME>"
       run: |
         cd build
-        make && make install
+        sudo make -j && sudo make install
 
     - name: Prepare for testing
       if: runner.os == 'macOS'
